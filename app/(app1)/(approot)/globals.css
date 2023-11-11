@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .myappinput, .myappinput2{    @apply px-5 rounded-sm mt-1  mx-3   }
+  .myappinput2 {    @apply  bg-slate-700 rounded-full flex justify-around my-2 
+  w-4/5  }
+  .b1 {    @apply text-slate-50 rounded-md border-2 px-2 bg-slate-500 mx-2 w-3/5
+    border-white border-solid}
+  .l1 {@apply my-2 text-slate-50  cursor-pointer bg-slate-700 
+    text-center  w-4/5 relative  }
+  .r1 {@apply cursor-pointer opacity-0 absolute  z-10  }
+  .r1:checked  + .lbox + .l1 { @apply  animate-bounce text-pink-600}
+  .r1:checked + .lbox {@apply bg-pink-300}
+  .span1 {    @apply text-red-300 mx-2 p-2 flex   }
+  .lbox { @apply w-3 h-3 rounded-full ring-2 ring-slate-50 m-auto }
+  .radiobox {@apply flex items-center flex-wrap w-full }
+
+}
+
+@layer components {
+  .aboutme {    @apply mx-auto w-[100px] ring-2 p-4 rounded-lg mb-4 text-center 
+    bg-emerald-500 opacity-90   shadow-white }
+  .aboutme:hover {    @apply transition-shadow delay-75 scale-110  shadow-inner shadow-purple-50 ring-slate-50  }
+}
+
+@layer components {
+  .container1 {    @apply 
+        flex flex-col  
+        w-full
+        h-full
+         text-white 
+        bg-gradient-to-br 
+        from-indigo-500 
+        to-indigo-300;
+  }
+  .headbar {
+    @apply bg-gradient-to-tr
+        py-10
+        from-sky-200 to-sky-400
+        h-4/6 m-5
+        rounded-md shadow-xl
+        ring-4
+        w-1/2
+        pl-10
+        mx-auto
+        font-semibold
+        min-w-[500px]
+        cursor-pointer
+        /* when you use flex, you can place your 
+        child elements with justify and items  */
+        flex
+        justify-center
+        items-center
+        relative
+  }
+
+  .corepart {
+    @apply flex 
+        p-2 font-semibold 
+        ring-2 ring-inset
+        rounded-lg
+        text-center
+        justify-center
+        px-20
+        bg-emerald-50
+        text-purple-600
+        w-1/2
+        mx-auto
+        min-w-[600px];
+  }
+
+  .footbar {
+    @apply bg-gradient-to-tr from-pink-300 
+        h-52 m-5
+        rounded-md shadow-xl  
+        flex
+        justify-center    
+        items-center
+        ring-4
+        w-1/2
+        mx-auto;
+  }
+
+  .imgframe {
+    @apply relative
+        w-[200px] h-[140px];
+  }
+
+  .imgroot {
+    @apply rounded-full
+        border-2
+        shadow-emerald-800
+        shadow-2xl
+        border-emerald-700;
+  }
+
+  /* for animation themes, you need to separately declare it */
+
+  .corepart:hover {
+    @apply transition delay-100
+        translate-x-5
+        cursor-pointer;
+  }
+
+  .footbar:hover {
+    @apply animate-bounce;
+  }
+}
